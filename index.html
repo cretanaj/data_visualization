@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css">    
+    <style type="text/css">
+      #map { width: 550px;   height: 550px; text-align: center;}
+
+        .bar{
+           fill: steelblue;
+        }
+        .bar:hover{
+           fill: brown;
+        }
+        .axis {
+          font: 10px sans-serif;
+        }
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+    </style>
+    <!--D3.js END-->
+
+    <title>Data Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap-fl/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="bootstrap-fl/css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="bootstrap-fl/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <body id="page-top" class="index">
+
+        <!-- Navigation -->
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="#page-top">Chicago Police Department : Crimes - 2001 to present</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling 
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+              /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <!-- Portfolio Grid Section -->
+        <section id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h3>Data Visualization</h3>
+                    </div>
+                </div>
+                <div class="row">                   
+                    <div id="" class="">
+                        <table id="example" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>  
+                </div>
+            </div>
+        </section>
+   
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="col-lg-12 text-left">
+                    <h3>Map</h3>
+                </div>              
+                <div id="map"class="col-lg-12">                          
+                </div>            
+            </div>
+        </header>
+
+        <!-- Footer -->
+        <footer class="text-center">        
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright &copy; Test
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+       
+        <!-- jQuery -->
+        <script src="bootstrap-fl/vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="bootstrap-fl/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="bootstrap-fl/js/jqBootstrapValidation.js"></script>
+        <script src="bootstrap-fl/js/contact_me.js"></script>
+
+        <!-- Theme JavaScript -->
+        <script src="bootstrap-fl/js/freelancer.min.js"></script>
+
+        <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.3.min.js"> </script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#example').DataTable( {        
+                    "ajax": "new_rows.json",
+                    initComplete: function () {
+                        this.api().columns().every( function () {
+                            var column = this;
+                            var select = $('<select><option value=""></option></select>')
+                                .appendTo( $(column.footer()).empty() )
+                                .on( 'change', function () {
+                                    var val = $.fn.dataTable.util.escapeRegex(
+                                        $(this).val()
+                                    );             
+                                    column
+                                        .search( val ? '^'+val+'$' : '', true, false )
+                                        .draw();
+                                } );             
+                            column.data().unique().sort().each( function ( d, j ) {
+                                select.append( '<option value="'+d+'">'+d+'</option>' )
+                            } );
+                        } );
+                    }
+                });                            
+                var table = $('#example').DataTable();
+                $('#example tbody').on( 'click', 'tr', function () {
+                   var idx = table.row( this ).index();
+                   var rowdata = table.rows().data()[idx]; 
+                    callSplit(String(rowdata));    
+                } );                
+            } );
+            function callSplit(val){
+                var resSplit = val.split(","); 
+                var val1 = resSplit[27];
+                var val2 = resSplit[28];
+                var val3 = resSplit[13];
+                var val4 = resSplit[10];
+                var val5 = resSplit[15];
+                //alert(val1 + ', ' + val2);
+                initMap(parseInt(val1),parseInt(val2),val4 + " - " + val3 + " - " + val5);
+            }
+
+            /********** MAP **********/
+            function initMap(x,y,z) {
+              var myLatLng = {lat: x, lng: y};
+
+              // Create a map object and specify the DOM element for display.
+              var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                scrollwheel: false,
+                zoom: 4
+              });
+
+              // Create a marker and set its position.
+              var marker = new google.maps.Marker({
+                map: map,
+                position: myLatLng,
+                title: z
+              });
+            }
+
+            /*
+
+            https://datatables.net/examples/ajax/objects_subarrays.html
+
+            */
+            /********** END MAP **********/
+
+            /********** D3.js chart **********/
+
+            // set the dimensions of the canvas
+            var margin = {top: 20, right: 20, bottom: 70, left: 40},
+            width = 600 - margin.left - margin.right,
+            height = 300 - margin.top - margin.bottom;
+
+            // set the ranges
+            var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
+            var y = d3.scale.linear().range([height, 0]);
+
+            // define the axis
+            var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom")
+
+            var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .ticks(10);
+
+            // add the SVG element
+            var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", 
+                  "translate(" + margin.left + "," + margin.top + ")");
+
+            // load the data
+            d3.json("new_rows2.json", function(error, data) {
+
+            data.forEach(function(d) {
+                d.AA = d.AA;
+                d.BB = +d.BB;
+            });
+
+            // scale the range of the data
+            x.domain(data.map(function(d) { return d.AA; }));
+            y.domain([0, d3.max(data, function(d) { return d.BB; })]);
+
+            // add axis
+            svg.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis)
+            .selectAll("text")
+              .style("text-anchor", "end")
+              .attr("dx", "-.8em")
+              .attr("dy", "-.55em")
+              .attr("transform", "rotate(-90)" );
+
+            svg.append("g")
+              .attr("class", "y axis")
+              .call(yAxis)
+            .append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 5)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("Frequency");
+
+            // Add bar chart
+            svg.selectAll("bar")
+              .data(data)
+            .enter().append("rect")
+              .attr("class", "bar")
+              .attr("x", function(d) { return x(d.AA); })
+              .attr("width", x.rangeBand())
+              .attr("y", function(d) { return y(d.BB); })
+              .attr("height", function(d) { return height - y(d.BB); });
+
+            });
+            /********** END D3.JS **********/
+
+        </script>
+          <script type="text/javascript"> 
+          $('#example')
+            .removeClass('display')
+            .addClass('table table-striped table-bordered')
+          </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvHG4S0s_c8MPFEkLjTE_DoenwfRnzRiQ&callback=initMap"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+    </body>
+</html>
